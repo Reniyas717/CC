@@ -13,7 +13,7 @@ class BookTicket implements Runnable {
 
 }
 
-public class Ex {
+public class Ex4 {
 
     public static void main(String[] args) throws Exception {
         BookTicket book = new BookTicket();
