@@ -9,7 +9,8 @@ class Ex {
         // anotherFunction(); // You can call other functions here
         // illname();
         // renameF();
-        kuchtoh();
+        // delimiter();
+        split();
 
     }
 
@@ -55,12 +56,19 @@ class Ex {
     File newFile = new File("C:\\Users\\ReniCd\\Desktop\\CLd\\CC\\Alok.txt");
     f.renameTo(newFile);
 }
-    static void kuchtoh()throws Exception{
+    static void delimiter()throws Exception{
         String str="123-456-789";
         Scanner sc=new Scanner(str);
         sc.useDelimiter("-");
         while(sc.hasNext()){
             System.out.println(sc.next());
+        }
+    }
+    static void split(){
+        String a="Apple,Banana,Rajan";
+        String sa[]=a.split(",");
+        for(String d:sa){
+            System.out.print(d+' ');
         }
     }
 }
