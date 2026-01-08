@@ -12,7 +12,9 @@ class Ex {
         // delimiter();
         // split();
         // kuchdigit();
-        match2();
+        // match2();
+        // pnumbermatch();
+        namematch();
 
     }
 
@@ -92,8 +94,19 @@ class Ex {
         String d[]=s.split("[0-9]+");
         for(String x:d){
             System.out.println(x);
+        }    
+    }
+   static void pnumbermatch(){
+    String p = "998052420";
+    // This regex means: exactly 10 digits
+    System.out.println(p.matches("\\d{10}")); // Output: true if p is 10 digits, false otherwise
+}
+    static void namematch(){
+        String name="ALokk cutie   hai";
+        // System.out.println(name.matches("[A-Za-z]{6}")); //Aa to Zz and only 6 digits
+        String d[]=name.split("\\s+");//single space split
+        for(String x:d){
+            System.out.println(x);
         }
-
-    
     }
 }
