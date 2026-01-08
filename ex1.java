@@ -14,8 +14,9 @@ class Ex {
         // kuchdigit();
         // match2();
         // pnumbermatch();
-        namematch();
-
+        // namematch();
+        // strongStringMatch();
+        extractnumber();
     }
 
     static void readFile() throws Exception {//read bytes by bytes
@@ -108,5 +109,23 @@ class Ex {
         for(String x:d){
             System.out.println(x);
         }
+    }
+    static void strongStringMatch(){
+       String str = "Abcdef1@G";
+    // Regex explanation:
+    // ^                 : start of string
+    // (?=.*[A-Z])       : at least one uppercase letter
+    // (?=.*[a-z])       : at least one lowercase letter
+    // (?=.*\\d)         : at least one digit
+    // (?=.*[^A-Za-z0-9]): at least one special character
+    // .{8,}             : minimum 8 characters
+    // $                 : end of string
+    boolean isStrong = str.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[^A-Za-z0-9]).{8,}$");
+    System.out.println(isStrong); // Output: true if string matches criteria, false otherwise
+}
+    static void extractnumber(){
+        String s="Hello123";
+       String digits=s.replaceAll("[^0-9]","");
+        System.out.println("Digits:"+digits);
     }
 }
