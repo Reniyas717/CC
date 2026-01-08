@@ -3,12 +3,14 @@ import java.util.Scanner;
 class Ex {
     public static void main(String[] args) throws Exception {
         // Call the function you want to run
-        readFile();
+        // readFile();
         // writeFile();
         // SystemRead();
         // anotherFunction(); // You can call other functions here
         // illname();
-        renameF();
+        // renameF();
+        kuchtoh();
+
     }
 
     static void readFile() throws Exception {//read bytes by bytes
@@ -53,4 +55,12 @@ class Ex {
     File newFile = new File("C:\\Users\\ReniCd\\Desktop\\CLd\\CC\\Alok.txt");
     f.renameTo(newFile);
 }
+    static void kuchtoh()throws Exception{
+        String str="123-456-789";
+        Scanner sc=new Scanner(str);
+        sc.useDelimiter("-");
+        while(sc.hasNext()){
+            System.out.println(sc.next());
+        }
+    }
 }
