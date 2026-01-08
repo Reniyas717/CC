@@ -11,7 +11,8 @@ class Ex {
         // renameF();
         // delimiter();
         // split();
-        kuchdigit();
+        // kuchdigit();
+        match2();
 
     }
 
@@ -82,4 +83,17 @@ class Ex {
     // So, ".*\\d.*" means "contains at least one digit anywhere in the string".
     System.out.println(a.matches(".*\\d.*")); // Output: true if a contains a digit, false otherwise
  }
+
+    static void match2(){
+        String s="ABC12334PQR";
+        
+        // System.out.println(s.matches("[A-Za-z]+"));//matches both caps and small
+        
+        String d[]=s.split("[0-9]+");
+        for(String x:d){
+            System.out.println(x);
+        }
+
+    
+    }
 }
