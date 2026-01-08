@@ -10,7 +10,8 @@ class Ex {
         // illname();
         // renameF();
         // delimiter();
-        split();
+        // split();
+        kuchdigit();
 
     }
 
@@ -71,4 +72,14 @@ class Ex {
             System.out.print(d+' ');
         }
     }
+    static void kuchdigit(){
+       String a = "Hello123";
+    // The matches() method checks if the string contains at least one digit.
+    // Regular expression explanation:
+    // .*   : any number of any characters before
+    // \\d  : a single digit (0-9)
+    // .*   : any number of any characters after
+    // So, ".*\\d.*" means "contains at least one digit anywhere in the string".
+    System.out.println(a.matches(".*\\d.*")); // Output: true if a contains a digit, false otherwise
+ }
 }
