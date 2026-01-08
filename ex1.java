@@ -7,7 +7,8 @@ class Ex {
         // writeFile();
         // SystemRead();
         // anotherFunction(); // You can call other functions here
-        illname();
+        // illname();
+        renameF();
     }
 
     static void readFile() throws Exception {//read bytes by bytes
@@ -47,4 +48,9 @@ class Ex {
             fo.write(s.charAt(i));
         }
     }
+    static void renameF() throws Exception {
+    File f = new File("C:\\Users\\ReniCd\\Desktop\\CLd\\CC\\raj.txt");
+    File newFile = new File("C:\\Users\\ReniCd\\Desktop\\CLd\\CC\\Alok.txt");
+    f.renameTo(newFile);
+}
 }
